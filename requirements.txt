@@ -1,3 +1,4 @@
 panel
 scikit-learn
 xgboost
+holoviews
