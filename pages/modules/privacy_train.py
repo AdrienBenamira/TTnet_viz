@@ -8,7 +8,12 @@ def app():
     epochs = 100
     st.title("Private Training ")
 
-    st.subheader("Training without the dataset, only a Machine Learning Model")
+    st.subheader("Training without the dataset, only a Machine Learning Model, as illustrated below.")
+
+
+    image = Image.open('Images/Privacy trainig.png')
+    st.image(image, width=1000)
+
     st.subheader("Choose ML Model:")
     uploaded_files = st.file_uploader("Choose a Model file", accept_multiple_files=True)
     namedata = None
@@ -22,7 +27,7 @@ def app():
         if st.button("Generate Dataset of size 10**4 samples + Train TTnet"):
 
             my_bar = st.progress(0)
-            for epoch in range(120):
+            for epoch in range(100):
                 print("\nStart of epoch %d" % (epoch,))
                 my_bar.progress(epoch + 1)
                 time.sleep(0.01)
@@ -30,7 +35,7 @@ def app():
                     st.write("Starting training with {} epochs...".format(epochs))
                 time.sleep(0.05)
 
-
+            time.sleep(2)
             if namedata == "adult":
                 st.write(' Matching with RF (on real): 96.3%')
                 st.write('Test accuracy (on real): 84.3%')

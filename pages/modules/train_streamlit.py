@@ -69,6 +69,7 @@ def app():
                     print("\nStart of epoch %d" % (epoch,))
                     my_bar.progress(epoch+1)
                     time.sleep(0.1)
+                time.sleep(2)
                 if dataset_choice == "Adult":
                     st.write('Test accuracy : 85.6%' )
                     st.write('Validation AUC: 90.1')

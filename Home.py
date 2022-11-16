@@ -44,7 +44,7 @@ st.markdown("""
     Here is an explanation video:
     
         """)
-video_file = open('Images/explanations.mp4', 'rb')
+video_file = open('Images/explanations_cut.mp4', 'rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 st.markdown("""
